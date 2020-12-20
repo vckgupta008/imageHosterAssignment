@@ -49,6 +49,7 @@ public class ImageController {
     @RequestMapping("/images/{id}/{title}")
     public String showImage(@PathVariable("title") String title, @PathVariable("id") Integer id, Model model) {
         Image image = imageService.getImage(id);
+        model.addAttribute("comments", image.getComments());
         model.addAttribute("image", image);
         model.addAttribute("tags", image.getTags());
         return "images/image";

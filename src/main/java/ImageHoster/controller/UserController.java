@@ -90,7 +90,7 @@ public class UserController {
     }
 
     public boolean checkPasswordStrength(String password) {
-        String passwordPattern="^(?=.*?[a-zA-Z])(?=.*?[0-9])(?=.*?\\W).+$";
+        String passwordPattern = "^(?=.*?[a-zA-Z])(?=.*?[0-9])(?=.*?\\W).+$";
         return password.matches(passwordPattern);
     }
 }
